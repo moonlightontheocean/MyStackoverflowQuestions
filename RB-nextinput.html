@@ -1,0 +1,1130 @@
+{% load static %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="fa-IR">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<head>
+
+<meta name="google-site-verification" content="yGeUngrktSfcIIP0snwvGpQC-2vucByU_hO4lV1z16A" />
+<meta name="msvalidate.01" content="6726D625257CF4A0853BBACB2321C85F" />
+    <meta charset="utf-8">
+    <title>{{ pagetitle }}</title>
+     <meta name="enamad" content="78245239" />
+    <link href="{% static 'img/RBLogo.png' %}" rel="shortcut icon" type="image/x-icon">
+
+    <meta name="description" content="{{ pagedescription }}">
+    <meta name="keywords" content="{{ pagekeyword }}">
+
+    <link href="{% static 'css/frontCss4b98.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/simTodayPriceCss186f.css' %}" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <div id="layoutWrapper" class="blue-theme">
+        <header id="top-menu">
+            <div class="navParent">
+                <div class="container_12">
+                    <nav class="collapse navbar-collapse">
+                        
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="{% url 'MainPage' %}">خانه سیم</a>
+
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/rondbazar/">اینستاگرام</a>
+                            </li>
+                            <li>
+                                <a href="#">راهنما</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'PostNumberForUser' %}">ثبت شماره</a>
+                            </li>
+                            <li>
+                                <a href="#">قیمت روز سیم کارت</a>
+                            </li>
+                            <li>
+                                <a href="#">استخدام</a>
+                            </li>
+                            <li>
+                                <a href="#">تبلیغات در رند بازار</a>
+                            </li>
+                            <li>
+                                <a href="#">تماس با ما</a>
+                            </li>
+                            <li>
+                                <a href="#">درباره ما</a>
+                            </li>
+
+                        </ul>
+                        
+                    </nav>
+
+                </div>
+            </div>
+
+            <div id="fixed_menu">
+                <div id="rond-info">
+                    <div class="container_12" style="height: 56px;">
+                        <a href="{% url 'ShowByOperator' 'hamrahaval' %}" class="grid_2 omega base-menuItem{% if page == 'hamrahaval' %}active{% endif %}">
+                            <img src="{% static 'img/hamrahaval-logo.png' %}" style="height: 20px;" alt="همراه اول" />
+                            <h1 class="simcartTitle">همراه اول</h1>
+                            
+                        </a>
+                        <a href="{% url 'ShowByOperator' 'irancell' %}" class="grid_2  alpha omega base-menuItem {% if page == 'irancell' %}active{% endif %}">
+                            <img src="{% static 'img/irancell-logo.png' %}" style="height: 20px;" alt="ایرانسل" />
+                            <h1 class="simcartTitle">ایرانسل</h1>
+                            
+                        </a>
+                        <a href="{% url 'ShowByOperator' 'samantell' %}" class="grid_2  alpha omega base-menuItem {% if page == 'samantell' %}active{% endif %}">
+                            <img src="{% static 'img/samantell-logo.png' %}" style="height: 20px;"  alt="سامانتل" />
+                            <h1 class="simcartTitle">سامانتل</h1>
+                            
+                        </a>
+                        <!-- <a href="{% url 'ShowByOperator' 'rightell' %}" class="grid_2  alpha omega base-menuItem {% if page == 'rightell' %}active{% endif %}">
+                            {% comment %} <img src="" alt="رایتل" /> {% endcomment %}
+                            <h1 class="simcartTitle">رایتل</h1>
+                            
+                        </a> -->
+                        <a href="{% url 'ShowByOperator' 'aptell' %}" class="grid_2  alpha omega base-menuItem {% if page == 'aptell' %}active{% endif %}">
+                            <img src="{% static 'img/aptel-logo.png' %}" style="height: 20px;" alt="آپتل" />
+                            <h1 class="simcartTitle">آپتل</h1>
+                            
+                        </a>
+                        <div class="grid_2 rond-logo">
+                            <a href="{% url 'MainPage' %}"><img src="{% static 'img/RBLogo.png' %}"
+                                    alt="لوگو رندبازار" style="height: 50px;"/></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="cbp-hrmenu" class="cbp-hrmenu">
+                    <ul>
+                        <li class="cbp-hropen">
+                            <a onclick="megamenue()" class="mega-menu-link">
+                                <h2>پیش شماره ها</h2>
+                            </a>
+                        </li>
+                        <div id="cbp-hrsub" class="cbp-hrsub" style="margin-top: 25px;">
+                            <div class="cbp-hrsub-inner">
+                                <div>
+                                    <h3>
+                                        <i class="fa fa-angle-down fa-lg"></i>
+                                        <span>همراه اول</span>
+                                    </h3>
+                                    <ul>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0912' %}">0912</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0910' %}">0910</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0919' %}">0919</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0911' %}">0911</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0913' %}">0913</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0914' %}">0914</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0915' %}">0915</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0916' %}">0916</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0917' %}">0917</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0918' %}">0918</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0990' %}">0990</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0991' %}">0991</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0992' %}">0992</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0993' %}">0993</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0994' %}">0994</a></h4>
+                                                </li>
+                                                
+                                                
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>
+                                        <i class="fa fa-angle-down fa-lg"></i>
+                                        <span>ایرانسل</span>
+                                    </h3>
+                                    <ul>
+                                        
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0990' %}">0930</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0933' %}">0933</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0935' %}">0935</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0936' %}">0936</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0937' %}">0937</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0938' %}">0938</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0939' %}">0939</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0900' %}">0900</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0901' %}">0901</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0902' %}">0902</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0903' %}">0903</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0904' %}">0904</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0905' %}">0905</a></h4>
+                                                </li>
+                                                <li>
+                                                    <h4><a href="{% url 'ShowByPrecode' '0941' %}">0941</a></h4>
+                                                </li>
+                
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>
+                                        <i class="fa fa-angle-down fa-lg"></i>
+                                        <span>سامانتل</span>
+                                    </h3>
+                                    <ul>
+                                                <li>
+                                                    <h4>موجود نیست</h4>
+                                                </li>
+                                                
+                
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3>
+                                        <i class="fa fa-angle-down fa-lg"></i>
+                                        <span>آپتل</span>
+                                    </h3>
+                                    <ul>
+                                                <li>
+                                                    <h4>موجود نیست</h4>
+                                                </li>
+                                                
+                
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="domain-mega-menu-all-search">
+                                <br>
+                                <hr>
+                                <div style="direction: rtl;">
+                                    <i class="fa fa-info-circle"></i>
+                                    در صورتی که پیش شماره مورد نظر شما در لیست موجود نیست از طریق تیکت به ما اطلاع دهید.
+                                </div>
+                            </div>
+                        </div>
+                        <li>
+                            <a href="{% url 'ShowByType' 'daemi' %}">
+                                <h2>دائمی</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ShowByType' 'etebari' %}">
+                                <h2>اعتباری</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ShowBySaleType' 'aghsat' %}">
+                                <h2>خط با شرایط فروش اقساط</h2>
+                            </a> 
+                        </li>
+                        
+
+
+                        <li class="active-link" style="float:left;">
+                            {% if User %}
+                            <a href="{% url 'userdashboard' %}" style="padding-right:0;">
+                                <span>دشبرد</span>
+                            </a>
+                            <a href="{% url 'Clogout' %}">
+                                <span style="border-left:1px solid white; padding-left: 8px;">خروج</span>
+                            </a>
+                            {% else %}
+                            <a href="{% url 'RegisterByMobile' %}" style="padding-right:0;">
+                                <span>ثبت نام</span>
+                            </a>
+                            <a href="{% url 'CloginByPhone' %}">
+                                <span style="border-left:1px solid white; padding-left: 8px;">ورود</span>
+                            </a>
+                            {% endif %}
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="clearfix"></div>
+        <div class="container_12" id="layoutContent">
+            <div class="clear"></div>
+            <div class="t-page">
+                <div class="grid_9">
+                    <div class="searchbox">
+                        <div id="search-panel">
+                            <div id="searchBoxHeader">
+                                <div class="grid_6 alpha t-fa-title">
+                                    <i class="fa fa-search"></i>
+                                    شماره دلخواه خود را از بین <span class="simCount"> {{numbercount}} </span> شماره
+                                    موجود انتخاب
+                                    نمایید.
+                                </div>
+                                <div class="grid_2 omega t-en-title">
+                                    Search Here
+                                </div>
+                                <hr />
+                            </div>
+                            <form action='{% url 'SearchInMainPage' %}' id="searchSimForm" method="post">
+                                {% csrf_token %}
+                                <div>
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="FirstDigit">شماره</label>
+                                        <div id="digits" class="grid_7">
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field SixthDigit must be a number." id="6"
+                                                maxlength="1" name="SixthDigit" size="1" type="text"
+                                                value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field FifthDigit must be a number." id="5"
+                                                maxlength="1" name="FifthDigit" size="1" type="text"
+                                                value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field FourthDigit must be a number."
+                                                id="4" maxlength="1" name="FourthDigit" size="1"
+                                                type="text" value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field ThirdDigit must be a number." id="3"
+                                                maxlength="1" name="ThirdDigit" size="1" type="text"
+                                                value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field SecondDigit must be a number."
+                                                id="2" maxlength="1" name="SecondDigit" size="1"
+                                                type="text" value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field شماره must be a number." id="1"
+                                                maxlength="1" name="FirstDigit" size="1" type="text"
+                                                value="" />
+                                            <input class="inptDigit" data-val="false"
+                                                data-val-number="The field Code must be a number." id="0"
+                                                maxlength="1" name="Code" size="1" type="text" value="" />
+                                                <!-- -- -->
+                                            <select class="" data-val="false"
+                                                data-val-number="The field PreCode must be a number." id="PreCode"
+                                                name="PreCode" tabindex="80">
+                                                <option value="">فرقی نمی کند</option>
+                                                <option data-category="1" value="0910">0910</option>
+                                                <option data-category="1" value="0911">0911</option>
+                                                <option data-category="1" value="0912">0912</option>
+                                                <option data-category="1" value="0913">0913</option>
+                                                <option data-category="1" value="0914">0914</option>
+                                                <option data-category="1" value="0915">0915</option>
+                                                <option data-category="1" value="0916">0916</option>
+                                                <option data-category="1" value="0917">0917</option>
+                                                <option data-category="1" value="0918">0918</option>
+                                                <option data-category="1" value="0919">0919</option>
+                                                <option data-category="1" value="0990">0990</option>
+                                                <option data-category="1" value="0991">0991</option>
+                                                <option data-category="1" value="0992">0992</option>
+                                                <option data-category="1" value="0993">0993</option>
+                                                <option data-category="1" value="0996">0996</option>
+                                                <option data-category="2" value="0905">0905</option>
+                                                <option data-category="2" value="0901">0901</option>
+                                                <option data-category="2" value="0904">0904</option>
+                                                <option data-category="2" value="0903">0903</option>
+                                                <option data-category="2" value="0902">0902</option>
+                                                <option data-category="2" value="0900">0900</option>
+                                                <option data-category="2" value="0930">0930</option>
+                                                <option data-category="2" value="0933">0933</option>
+                                                <option data-category="2" value="0935">0935</option>
+                                                <option data-category="2" value="0936">0936</option>
+                                                <option data-category="2" value="0937">0937</option>
+                                                <option data-category="2" value="0938">0938</option>
+                                                <option data-category="2" value="0939">0939</option>
+                                                <option data-category="3" value="0932">0932</option>
+                                                <option data-category="18" value="0920">0920</option>
+                                                <option data-category="18" value="0923">0923</option>
+                                                <option data-category="18" value="0921">0921</option>
+                                                <option data-category="18" value="0922">0922</option>
+                                                <option data-category="19" value="0999">0999</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="SimOperatorE">اپراتور</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="SimOperatorE" name="SimOperatorE">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="1">همراه اول</option>
+                                                <option value="2">ایرانسل</option>
+                                                <option value="3">رایتل</option>
+                                                <option value="4">سامانتل</option>
+                                                <option value="5">آپتل</option>
+                                            </select>
+                                        </div>
+
+
+                                        <label class="grid_1 alpha" for="StateId">استان</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" data-val-number="The field استان must be a number."
+                                                data-val-required="The استان field is required." id="StateId"
+                                                name="StateId">
+                                                <option value="">فرقی نمی کند</option>
+                                                <option value="1">تهران</option>
+                                                <option value="2">آذربايجان شرقی</option>
+                                                <option value="3">آذربايجان غربی</option>
+                                                <option value="4">اردبيل</option>
+                                                <option value="5">اصفهان</option>
+                                                <option value="6">ايلام</option>
+                                                <option value="7">بوشهر</option>
+                                                <option value="8">چهار محال و بختياری</option>
+                                                <option value="9">خراسان جنوبی</option>
+                                                <option value="10">خراسان رضوی</option>
+                                                <option value="11">خراسان شمالی</option>
+                                                <option value="12">خوزستان</option>
+                                                <option value="13">زنجان</option>
+                                                <option value="14">سمنان</option>
+                                                <option value="15">سيستان و بلوچستان</option>
+                                                <option value="16">فارس</option>
+                                                <option value="17">قزوين</option>
+                                                <option value="18">قم</option>
+                                                <option value="19">کردستان</option>
+                                                <option value="20">کرمان</option>
+                                                <option value="21">کرمانشاه</option>
+                                                <option value="22">کهگيلويه و بوير احمد</option>
+                                                <option value="23">گلستان</option>
+                                                <option value="24">گيلان</option>
+                                                <option value="25">لرستان</option>
+                                                <option value="26">مازندران</option>
+                                                <option value="27">مرکزی</option>
+                                                <option value="28">هرمزگان</option>
+                                                <option value="29">همدان</option>
+                                                <option value="30">يزد</option>
+                                                <option value="31">البرز</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="SimType">نوع</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="SimType" name="SimType">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="1">اعتباری</option>
+                                                <option value="2">دائمی</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="grid_1 alpha" for="CityId">نوع آگهی</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false"
+                                                data-val-number="The field نوع آگهی must be a number."
+                                                data-val-required="The نوع آگهی field is required." id="adstype"
+                                                name="adstype">
+                                                <option value="">فرقی نمی کند</option>
+                                                <option value="1">ویژه</option>
+                                                <option value="2">عادی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="SimStatus">وضعیت</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="SimStatus" name="SimStatus">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="1">صفر</option>
+                                                <option value="2">کارکرده</option>
+                                                <option value="3">در حد صفر</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="grid_1 alpha" for="SimCoPrice">قیمت</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="SimCoPrice" name="SimCoPrice">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="0">قیمت توافقی</option>
+                                                <option value="1">قیمت مشخص</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="SimQuality">مرغوبیت</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="SimQuality" name="SimQuality">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="2">رند</option>
+                                                <option value="1">معمولی</option>
+                                            </select>
+                                        </div>
+                                        <label class="grid_1 alpha" for="PriceFrom">از</label>
+                                        <div class="grid_3 omega">
+                                            <div class="price-input">
+                                                <input data-val="false" data-val-number="The field از must be a number."
+                                                    id="PriceFrom" name="PriceFrom" type="text" value="" /><span
+                                                    class="font-dak">تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="SimQualityTypeId">نوع رند</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false"
+                                                data-val-number="The field نوع رند must be a number."
+                                                id="SimQualityTypeId" name="SimQualityTypeId">
+                                                <option value="">فرقی نمی کند</option>
+                                                <option value="49">رند حروفی</option>
+                                                <option value="42">رند 7 رقم یکی</option>
+                                                <option value="41">رند 6 رقم یکی از آخر</option>
+                                                <option value="34">رند 6 رقم یکی از اول</option>
+                                                <option value="31">رند میلیونی</option>
+                                                <option value="30">رند ده هزاری از آخر</option>
+                                                <option value="28">رند ده هزاری از اول</option>
+                                                <option value="46">رند 3 جفت از آخر</option>
+                                                <option value="24">رند 3 جفت از اول</option>
+                                                <option value="55">رند متشکل از دو رقم</option>
+                                                <option value="40">رند 5 رقم یکی از آخر</option>
+                                                <option value="33">رند 5 رقم یکی از اول</option>
+                                                <option value="51">رند صد صدی</option>
+                                                <option value="26">رند گفتاری</option>
+                                                <option value="29">رند هزاری از آخر</option>
+                                                <option value="27">رند هزاری از اول</option>
+                                                <option value="39">رند 4 رقم یکی از آخر</option>
+                                                <option value="32">رند 4 رقم یکی از اول</option>
+                                                <option value="37">رند 5 رقم یکی از وسط</option>
+                                                <option value="47">رند ده دهی از آخر</option>
+                                                <option value="25">رند ده دهی از اول</option>
+                                                <option value="52">رند کد پایین</option>
+                                                <option value="56">رند 3 پله </option>
+                                                <option value="45">رند جفت جفت از آخر</option>
+                                                <option value="23">رند جفت جفت از اول</option>
+                                                <option value="48">رند 3 رقم یکی از اول</option>
+                                                <option value="21">رند تکرار پیش شماره</option>
+                                                <option value="18">رند ترازویی</option>
+                                                <option value="43">رند پله ای از آخر</option>
+                                                <option value="17">رند پله ای از اول</option>
+                                                <option value="36">رند 4 رقم یکی از وسط</option>
+                                                <option value="38">رند 3 رقم یکی از آخر</option>
+                                                <option value="44">رند ترتیبی از آخر</option>
+                                                <option value="20">رند ترتیبی از اول</option>
+                                                <option value="19">رند تاریخ تولدی</option>
+                                                <option value="16">رند آینه ای</option>
+                                                <option value="35">رند 3 رقم یکی از وسط</option>
+                                                <option value="22">رند تکرار 2 رقم یکی</option>
+                                                <option value="9">رند (ساير)</option>
+                                            </select>
+                                        </div>
+                                        <label class="grid_1 alpha" for="PriceTo">تا</label>
+                                        <div class="grid_3 omega">
+                                            <div class="price-input">
+                                                <input data-val="false" data-val-number="The field تا must be a number."
+                                                    id="PriceTo" name="PriceTo" type="text" value="" /><span
+                                                    class="font-dak">تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="grid_1 alpha" for="VendorType">فروشنده</label>
+                                        <div class="grid_3 omega">
+                                            <select data-val="false" id="VendorType" name="VendorType">
+                                                <option selected="selected" value="">فرقی نمی کند</option>
+                                                <option value="1">فروشگاه</option>
+                                                <option value="2">شخصی</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="grid_3 omega" style="margin-right:100px;">
+                                            <button class="btn col-md-12 search-button" type="submit"
+                                                id="searchBtn">جستجو</button>
+                                            <button class="btn col-md-12 reset-button" type="reset" id="resetBtn">پاک
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </form>
+
+                            <div id="searchBoxFooter">
+                                <hr />
+                                <div class="comment">
+                                    <div class="grid_4 omega alpha">
+                                        <i class="fa fa-question-circle"></i>
+
+                                        <a href="#" target="_blank">چگونه از امکانات جستجو بهتر استفاده کنید.</a>
+
+                                    </div>
+                                    <div class="grid_4 omega alpha left t-fa-title" style="text-align: left;">
+                                        <i class="fa fa-database"></i>
+                                        شماره های درج شده تاکنون:<span class="simCount"> {{numbercount}} </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="leftLinkBox">
+                        <div>
+                            <a class="lefttabs left-tab1" href="#">خرید سیم کارت</a>
+                        </div>
+                        <div>
+                            <a class="lefttabs left-tab2" href="#">فروش سیم کارت</a>
+                        </div>
+                        <div>
+                            <a class="lefttabs left-tab3" href="{% url 'lookingfor' %}">درخواست شماره دلخواه</a>
+                        </div>
+                        <div>
+                            <a class="lefttabs left-tab4" href="#">قوانین و مقررات</a>
+                        </div>
+                        <div>
+                            <a class="lefttabs left-tab5" href="#">فروشگاه خود را بسازید.</a>
+                        </div>
+                        <div>
+                            <a class="lefttabs left-tab6" href="#">رندبازار چگونه کار می کند؟</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="t-page">
+                <div class="grid_12 sim-price">
+                    <form action="#" id="searchForm" method="get">
+                        
+                        
+
+                        
+                        <div class="sim-price-grid">
+                            <div class="grid_5 alpha">
+                                <i class="fa fa-search fa-lg icon-big"></i>
+                                ویترین آخرین شماره ها
+                            </div>
+                            <div class="grid_3 omega">
+                                Last SIMcards
+                            </div>
+                            <hr />
+                            <div class="sim-price-content">
+                                <table>
+                                    <thead>
+                                        <tr class="tr1">
+                                            <td class="td1">اپراتور</td>
+                                            <td class="td2"></td>
+                                            <td class="td1">فروشنده</td>
+                                            <td class="td2"></td>
+                                            <td class="td1">شناسه</td>
+                                            <td class="td2"></td>
+                                            <td class="td3">شماره</td>
+                                            <td class="td2"></td>
+                                            <td>وضعیت</td>
+                                            <td class="td2"></td>
+                                            <td class="td3">قیمت (تومان)</td>
+                                            <td class="td2"></td>
+                                            <td class="td3">نظر کارشناسی</td>
+                                            <td class="td2"></td>
+                                            <td>عملیات</td>
+                                        </tr>
+                                        <tr class="tr2"></tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for n in numbers %}
+                                        <tr class="tr1">
+                                            <td>
+                                                {% if n.Operator == '1' %}
+                                                <img src="{% static 'img/hamrahaval-logo.png' %}" title="اپراتور همراه اول" alt="اپراتور همراه اول"
+                                                height="30" width="30" />
+                                                {% elif n.Operator == '2' %}
+                                                <img src="{% static 'img/irancell-logo.png' %}" title="اپراتور ایرانسل" alt="اپراتور ایرانسل"
+                                                height="30" width="30" />
+                                                {% elif n.Operator == '5' %}
+                                                <img src="{% static 'img/aptel-logo.png' %}" title="اپراتور آپتل" alt="اپراتور آپتل"
+                                                height="30" width="30" />
+                                                {% elif n.Operator == '4' %}
+                                                <img src="{% static 'img/samantell-logo.png' %}" title="اپراتور سامانتل" alt="اپراتور سامانتل"
+                                                height="30" width="30" />
+                                                {% endif %}
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td>
+                                                {% if n.SellerLevel == '0' %}
+                                                <img src="{% static 'img/unknown-18-32.png' %}" title="سطح پروفایل نامشخص" alt="سطح پروفایل نامشخص"
+                                                height="30" width="30" />
+                                                {% elif n.SellerLevel == '1' %}
+                                                <img src="{% static 'img/person-4-32.png' %}" title="سطح پروفایل کاربر ساده" alt="سطح پروفایل کاربر ساده"
+                                                height="30" width="30" />
+                                                {% elif n.SellerLevel == '2' %}
+                                                <img src="{% static 'img/icon-admin-32.png' %}" title="سطح کاربر کارشناس فروش" alt="سطح کاربر کارشناس فروش"
+                                                height="30" width="30" />
+                                                {% elif n.SellerLevel == '3' %}
+                                                <img src="{% static 'img/shop-44-32.png' %}" title="سطح کاربر فروشگاه سیمکارت" alt="سطح کاربر فروشگاه سیمکارت"
+                                                height="30" width="30" />
+                                                {% endif %}
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td>
+                                                {{ n.id }}
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td class="number simNumber" style="direction:ltr; text-decoration: double;">
+                                                <a class="t-link" href="{% url 'SimDetails' n.CallNumber%}"
+                                                    target="_blank"><strong>{{n.ShowModel}}</strong></a>
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td>
+                                            {% if n.HowMuchUsed == '0' %}
+                                            نامشخص
+                                            {% elif n.HowMuchUsed == '1' %}
+                                            صفر
+                                            {% elif n.HowMuchUsed == '2' %}
+                                            کارکرده
+                                            {% elif n.HowMuchUsed == '3' %}
+                                            درحدصفر
+                                            {% endif %}
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td>{{n.Price|intcomma }}</td>
+                                            <td class="td1"></td>
+                                            <td>
+                                                {% if n.NazarKarshenas == '0' %}
+                                                ثبت نشده
+                                                {% elif n.NazarKarshenas == '1' %}
+                                                سرمایه گذاری
+                                                {% elif n.NazarKarshenas == '2' %}
+                                                مناسب مصرف
+                                                {% elif n.NazarKarshenas == '3' %}
+                                                فرصت طلایی
+                                                {% elif n.NazarKarshenas == '4' %}
+                                                پیشنهاد بد
+                                                {% endif %}
+                                            </td>
+                                            <td class="td1"></td>
+                                            <td>
+                                                <span>
+                                                    <a href="{% url 'SimDetails' n.CallNumber%}" target="_blank"><i class="i-sim-price1 fa fa-list fa-lg"></i></a>
+                                                </span>
+                                                <span>
+                                                    <i class="i-sim-price1 fa fa-file fa-lg"></i>
+                                                </span>
+                                                <span>
+                                                    <i class="i-sim-price1 fa fa-paperclip fa-lg"></i>
+                                                </span>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr class="tr2"></tr>
+                                    
+                                        {% endfor %}
+                                        
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="ediv">
+                        </div>
+                        
+                        
+                        
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="clear"></div>
+            <div style="margin-bottom:40px;">
+                <div class="grid_12">
+
+
+
+
+                    <div class="h-box">
+                        <div class="h-box-title">
+                            <div class="grid_6 alpha title-icon">
+                                فروشگاه های برتر
+                            </div>
+                            <div class="grid_4 left omega latin-title">
+
+                            </div>
+                            <hr />
+                        </div>
+
+
+                        <div id="userShopAdConfirmed">
+                        {% for shop in shops %}
+                            <div class="grid_3 t-cell alpha Vip">
+                                <div class="border-div">
+                                    <div style="height:164px;">
+                                        <div class="t-header">
+                                            <div class="t-title" style="color : #d40a0a">
+                                                {{shop.Name}} 
+                                            </div>
+                                            <div class="t-icon">
+                                                        <div class="vip">
+                                                            <img src="{% static 'img/shop-44-32.png' %}" title="سطح کاربر فروشگاه سیمکارت" alt="سطح کاربر فروشگاه سیمکارت">
+                                                        </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="tel-box">
+                                            {% for sn in shopnumbers %}
+                                                    
+                                                {% if sn.User.id == shop.User.id %}
+                                                    <a href="{% url 'SimDetails' sn.CallNumber %}" target="_blank">{{ sn.ShowModel }}</a>
+                                                
+                                                {% endif %}
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="arrow-see" style="direction: rtl;">
+                                        <a href="{% url 'ShopProfileBase' shop.Name %}" target="_blank">مشاهده فروشگاه {{shop.Name}} کلیک کنید</a>
+                                    </div>
+
+                                    <div class="t-contact-info">
+                                        <div class="grid_1 alpha omega t-contact-title">تماس</div>
+
+                                        <div class="grid_2 omega alpha">
+                                            <div>{{shop.Phone}}</div>
+                                            <div>{{shop.PhoneTwo}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                            
+
+                            <div class="grid_3  t-cell" id="add-cell">
+                                <div class="border-div">
+                                    {% if request.user %}
+                                    <a href="{% url 'shopprofileedit' %}" style="height:190px;display: block;">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'CloginByPhone' %}" style="height:190px;display: block;">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    <div id="comment">
+                                        شما هم به فروشگاه های ویژه بپیوندید
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div style="margin-bottom:40px;">
+                <div class="grid_12">
+
+
+
+
+                    <div class="h-box">
+                        <div class="h-box-title">
+                            <div class="grid_6 alpha title-icon">
+                                کارشناسان برتر
+                            </div>
+                            <div class="grid_4 left omega latin-title">
+
+                            </div>
+                            <hr />
+                        </div>
+
+
+                        <div id="userShopAdConfirmed">
+                        
+                        {% for shop in karshenasprofile %}
+                            <div class="grid_3 t-cell alpha Vip">
+                                <div class="border-div">
+                                    <div style="height:164px;">
+                                        <div class="t-header">
+                                            <div class="t-title" style="color : #d40a0a">
+                                                {{shop.user.username}} 
+                                            </div>
+                                            <div class="t-icon">
+                                                        <div class="vip">
+                                                            <img src="{% static 'img/customer-service.png' %}" style="height: 30px;" title="سطح کاربر کارشناس فروش سیمکارت" alt="سطح کاربر کارشناس فروش سیمکارت">
+                                                        </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="tel-box">
+                                            {% for n in numberWithCont %}
+                                                    
+                                                    
+                                                {% if n.Contract.Seller.User.id == shop.user.id %}
+                                                    <a href="{% url 'SimDetails' n.CallNumber %}" target="_blank">{{ n.ShowModel }}</a>
+                                                
+                                                {% endif %}
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="arrow-see" style="direction: rtl;">
+                                        <a href="#" target="_blank">برای مشاهده پروفایل کارشناس کلیک کنید.</a>
+                                    </div>
+
+                                    <div class="t-contact-info">
+                                        <div class="grid_1 alpha omega t-contact-title">تماس</div>
+                                        <div class="grid_2 omega alpha">
+                                            <div>{{shop.Kphone}}</div>
+                                            <div>{{shop.KphoneTwo}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                            
+
+                            <div class="grid_3  t-cell" id="add-cell">
+                                <div class="border-div">
+                                    {% if request.user %}
+                                    <a href="{% url 'shopprofileedit' %}" style="height:190px;display: block;">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'CloginByPhone' %}" style="height:190px;display: block;">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    <div id="comment">
+                                        شما هم به کارشناس های ویژه بپیوندید
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+        </div>
+
+        <footer id="layoutFooter">
+            <div id="footerMenu">
+                <div class="container_12">
+
+                    <div id="rond-items">
+                        <div class="grid_3 alpha rond-item">
+                            <div class="f-title">
+                                راهنما
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">تعریف انواع رند</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+
+                                <a href="#">راهنمای قیمت گذاری سیمکارت</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">راهنمای ثبت آگهی در رندبازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">راهنمای جست و جوی سیمکارت</a>
+                            </div>
+
+                        </div>
+                        <div class="grid_3 rond-item">
+                            <div class="f-title">
+                                قوانین و حریم خصوصی
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">متن قوانین رند بازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">متن حریم خصوصی رندبازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">متن مسئولیت اجتماعی رند بازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">بروزرسانی ها رندبازار</a>
+                            </div>
+
+                        </div>
+                        <div class="grid_3 rond-item">
+                            <div class="f-title">
+                                
+                                ارتباط و تماس
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">تماس با رندبازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">درباره رند بازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">معرفی گروه رندبازار</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a href="#">مسیریابی رندبازار روی نقشه</a>
+                            </div>
+
+                        </div>
+                        <div class="grid_3 rond-item">
+                            <div class="f-title">
+                                
+                               ابزار ها
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a
+                                    href="{% url 'rondyab' %}">رندیاب
+                                </a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a
+                                    href="{% url 'lookingfor' %}">خط یاب - یافتن خط مناسب برای شما</a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a
+                                    href="#">درخواست مشاوره رایگان </a>
+                            </div>
+                            <div class="f-subtitle">
+                                <span class="rect"></span>
+                                <a
+                                    href="#">سرویس تغییرات قیمت سیمکارت</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div style="margin-bottom:20px;">
+                        <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=510999&Code=1eUSq6NxWrletJqLXvETmGM2ukSEg2hq'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=510999&Code=1eUSq6NxWrletJqLXvETmGM2ukSEg2hq' alt='' style='cursor:pointer' code='1eUSq6NxWrletJqLXvETmGM2ukSEg2hq'></a>
+                        <a target="_blank" href="#" class="cloob iconlink"></a>
+                        <a target="_blank" href="#" class="aparat iconlink"></a>
+                        <a target="_blank" href="#" class="facebook iconlink"></a>
+                        <a target="_blank" href="#" class="linkedin iconlink"></a>
+                        <a target="_blank" href="#" class="twitter iconlink"></a>
+                        <a target="_blank" href="#" class="google-plus iconlink"></a>
+                        <a target="_blank" href="#" class="instagram iconlink"></a>
+                        <a target="_blank" href="#" class="facenama iconlink"></a>
+                        <a target="_blank" href="#" class="viber iconlink"></a>
+
+                        <div class="grid_7 simcart-base-title rtl omega alpha">
+                          رندبازار مرجع خرید و فروش سیمکارت های رند
+
+                            <img id="footer-rond-logo" src="{% static 'img/RBLogo.png' %}" alt="رندبازار"
+                                height="30" width="30" />
+
+                            <span class="grid_2 omega" style="float:left;">
+                                rondbazar.com 2019-2024
+                                ©
+                            </span>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="livePlaceHolder"></div>
+            </div>
+
+        </footer>
+
+
+
+    </div>
+
+    <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+    <script>(window.jQuery) || document.write('<script src="/bundles/arLib"><\/script>');</script>
+
+    <!-- my custome JS scripts -->
+    <script>
+        var elts = document.getElementsByClassName('inptDigit')
+        Array.from(elts).forEach(function(elt){
+        elt.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (elt.value.length == 1) {
+            // Focus on the next sibling
+            elt.nextElementSibling.focus()
+            }
+        });
+        })
+    </script>
+
+    <script>
+        megamenue()
+        function megamenue() {
+            var x = document.getElementById("cbp-hrsub");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
